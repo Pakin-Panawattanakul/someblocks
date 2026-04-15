@@ -18,3 +18,4 @@ install: output
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/someblocks
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/someblocks.1
+
