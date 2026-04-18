@@ -4,7 +4,7 @@ static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
     //{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",
     //30,		0},
-    {"", "brightnessctl | grep Current | cut -d ' ' -f 4 | sed 's|[()]||g;s|^|<span color=\"#ffc0b9\">󰃟 |;s|$|</span>|'", 0, 3 },
+    {"", "brightnessctl i | grep -q backlight && brightnessctl | grep Current | cut -d ' ' -f 4 | sed 's|[()]||g;s|^|<span color=\"#ffc0b9\">󰃟 |;s|$|</span>|'", 0, 3 },
     {"", "upower -i \"$(upower -e | grep BAT)\" \
       | awk '/percentage/ {print \"<span color=\\\"#fce094\\\">󰁹 \"$2\"</span>\"}'", 5, 0},
     //{"", "cat /tmp/dwl-keymap",					0,		3},
